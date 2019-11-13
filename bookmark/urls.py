@@ -2,7 +2,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('api/', ApiBookmarkList.as_view(), name='api'),
+    path('', ApiBookmarkList.as_view(), name='api'),
     path('api/<int:pk>/', ApiBookmarkCreate.as_view(), name='api_add'),
     path('api/<int:pk>/', ApiBookmarkDetail.as_view(), name='api_detail'),
     path('api/<int:pk>/', ApiBookmarkUpdate.as_view(), name='api_update'),
